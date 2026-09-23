@@ -11,7 +11,7 @@ import Footer from "@/components/Footer.astro";
       <div class="grid gap-8 sm:grid-cols-[1.25fr_0.75fr] sm:gap-16">
         <div class="space-y-6">
           <p class="eyebrow text-xs font-semibold tracking-[0.18em] text-accent uppercase">
-            Writer / software engineer
+            Writer · software engineer
           </p>
           <h1 class="text-5xl leading-[0.95] text-accent sm:text-7xl">Richard Bown</h1>
           <p class="max-w-xl text-xl leading-8 sm:text-2xl">
@@ -27,8 +27,7 @@ import Footer from "@/components/Footer.astro";
 
       <div class="mt-16 border-t border-border pt-8 sm:mt-24 sm:pt-10">
         <div class="mb-8 flex items-baseline justify-between gap-6">
-          <h2 class="text-3xl text-foreground sm:text-4xl">Books</h2>
-          <a class="text-sm text-accent underline underline-offset-4" href="/about/">About Richard</a>
+          <h2 id="books" class="text-3xl text-foreground sm:text-4xl">Books</h2>
         </div>
 
         <div class="grid gap-12 sm:grid-cols-2 sm:gap-16">
@@ -36,7 +35,7 @@ import Footer from "@/components/Footer.astro";
             <img
               src="https://humansoftwarebook.com/wp-content/uploads/2026/05/hs3-book-slant-large-1024x785.png"
               alt="Human Software book cover"
-              class="w-full object-contain object-left grayscale"
+              class="book-cover h-52 w-full object-cover object-[36%_center] grayscale"
               loading="lazy"
             />
             <div class="space-y-4">
@@ -53,7 +52,7 @@ import Footer from "@/components/Footer.astro";
             <img
               src="https://onemoreislandbook.com/one-more-island-book-min.jpg"
               alt="One More Island book cover"
-              class="w-full object-contain object-left grayscale"
+              class="book-cover h-52 w-full object-contain object-center grayscale"
               loading="lazy"
             />
             <div class="space-y-4">
@@ -67,6 +66,7 @@ import Footer from "@/components/Footer.astro";
           </article>
         </div>
       </div>
+
     </section>
   </main>
   <Footer />

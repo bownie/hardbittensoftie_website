@@ -1,0 +1,24 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<Layout title="Writing | Hard Bitten Softie">
+  <Header />
+  <main id="main-content" class="app-layout">
+    <section class="border-y border-border py-12 sm:py-16">
+      <div class="max-w-2xl space-y-6">
+        <p class="text-xs font-semibold tracking-[0.18em] text-accent uppercase">Writing</p>
+        <h1 class="text-5xl leading-[0.95] text-accent sm:text-7xl">Words about people, systems and places.</h1>
+        <p class="text-lg leading-8 text-muted-foreground">
+          Essays and occasional thoughts from a writer with a long life in software.
+        </p>
+        <a class="inline-block text-sm text-accent underline underline-offset-4" href="https://richardwbown.com/">
+          Read the writing archive
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

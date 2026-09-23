@@ -18,14 +18,21 @@ const currentYear = new Date().getFullYear();
   {...attrs}
 >
   <div
-    class="border-border flex flex-col items-center justify-between border-t py-6 sm:flex-row-reverse sm:py-4"
+    class="border-border flex flex-col gap-5 border-t py-8 text-sm sm:flex-row sm:items-end sm:justify-between"
   >
-    <Socials />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
-      <span>{t.footer.copyright} &#169; {currentYear}</span>
-      <span>&nbsp;Richard Bown</span>
-      <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
-      <span>{t.footer.allRightsReserved}</span>
+    <div class="space-y-2">
+      <p class="site-title text-xl">Hard Bitten Softie</p>
+      <nav class="flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground" aria-label="Footer navigation">
+        <a href="/#writing">Writing</a>
+        <a href="/#books">Books</a>
+        <a href="/about/">About</a>
+        <a href="https://humansoftwarebook.com/">Human Software</a>
+        <a href="https://onemoreislandbook.com/">One More Island</a>
+      </nav>
+    </div>
+    <div class="flex flex-col gap-2 text-muted-foreground sm:items-end">
+      <Socials />
+      <span>{t.footer.copyright} &#169; {currentYear} Richard Bown</span>
     </div>
   </div>
 </footer>
