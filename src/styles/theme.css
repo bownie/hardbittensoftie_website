@@ -7,28 +7,32 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
-  --font-app: var(--font-google-sans-code);
+  --font-app: var(--font-body);
 }
 
 /* Light theme values */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
-  --foreground: #282728;
-  --accent: #006cac;
-  --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
-  --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --background: #f4f0e8;
+  --foreground: #282521;
+  --accent: #a5482d;
+  --accent-foreground: #fffaf2;
+  --muted: #ded6c9;
+  --muted-foreground: #70685e;
+  --border: #c8bdad;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", Helvetica, sans-serif;
 }
 
 /* Dark theme values */
 [data-theme="dark"] {
-  --background: #212737;
-  --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
-  --muted: #343f60;
-  --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --background: #27231f;
+  --foreground: #f1eadf;
+  --accent: #e08a68;
+  --accent-foreground: #27231f;
+  --muted: #474038;
+  --muted-foreground: #bdb2a4;
+  --border: #6d5e50;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "DM Sans", Helvetica, sans-serif;
 }

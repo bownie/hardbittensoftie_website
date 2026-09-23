@@ -21,7 +21,7 @@
 }
 
 @utility max-w-app {
-  @apply max-w-3xl;
+  @apply max-w-[1100px];
 }
 
 @utility app-layout {
@@ -34,4 +34,42 @@
 
 :target {
   scroll-margin-block: 1rem;
+}
+
+@layer base {
+  html {
+    background: var(--background);
+  }
+
+  body {
+    font-family: var(--font-body);
+    letter-spacing: 0.01em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .site-title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  *,
+  *::before,
+  *::after {
+    border-radius: 0 !important;
+    animation: none !important;
+    transition: none !important;
+  }
 }

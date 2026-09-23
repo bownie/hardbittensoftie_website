@@ -2,18 +2,70 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import config from "@/config";
 ---
 
 <Layout>
   <Header />
   <main id="main-content" class="app-layout">
-    <section class="space-y-8 border border-accent/20 bg-accent/5 p-8 shadow-[0_20px_40px_rgba(0,108,172,0.12)] sm:p-10">
-      <div class="app-prose mx-auto max-w-prose space-y-6 text-base leading-8 text-muted-foreground">
-        <h1 class="text-3xl font-semibold text-accent">Richard Bown</h1>
+    <section class="site-intro border-y border-border py-12 sm:py-16">
+      <div class="grid gap-8 sm:grid-cols-[1.25fr_0.75fr] sm:gap-16">
+        <div class="space-y-6">
+          <p class="eyebrow text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+            Writer / software engineer
+          </p>
+          <h1 class="text-5xl leading-[0.95] text-accent sm:text-7xl">Richard Bown</h1>
+          <p class="max-w-xl text-xl leading-8 sm:text-2xl">
+            Stories about what we build, what it costs, and the soft parts of being human.
+          </p>
+        </div>
+        <div class="flex items-end border-t border-border pt-6 sm:border-t-0 sm:border-s sm:pt-0 sm:ps-8">
+          <p class="max-w-sm text-sm leading-7 text-muted-foreground">
+            Hard bitten by three decades of corporate IT. Still a softie about people, place, and a good story.
+          </p>
+        </div>
+      </div>
 
+      <div class="mt-16 border-t border-border pt-8 sm:mt-24 sm:pt-10">
+        <div class="mb-8 flex items-baseline justify-between gap-6">
+          <h2 class="text-3xl text-foreground sm:text-4xl">Books</h2>
+          <a class="text-sm text-accent underline underline-offset-4" href="/about/">About Richard</a>
+        </div>
 
+        <div class="grid gap-12 sm:grid-cols-2 sm:gap-16">
+          <article class="grid gap-6 sm:grid-cols-[10rem_1fr] sm:items-start">
+            <img
+              src="https://humansoftwarebook.com/wp-content/uploads/2026/05/hs3-book-slant-large-1024x785.png"
+              alt="Human Software book cover"
+              class="w-full object-contain object-left grayscale"
+              loading="lazy"
+            />
+            <div class="space-y-4">
+              <p class="text-xs font-semibold tracking-[0.16em] text-accent uppercase">Debut novel</p>
+              <h3 class="text-2xl text-foreground">Human Software</h3>
+              <p class="text-sm leading-7 text-muted-foreground">
+                When corporate wants you gone, who does the dirty work? A darkly human novel about ambition, loyalty, and the systems behind the code.
+              </p>
+              <a class="text-sm text-accent underline underline-offset-4" href="https://humansoftwarebook.com/">Visit the book site</a>
+            </div>
+          </article>
 
+          <article class="grid gap-6 border-t border-border pt-8 sm:grid-cols-[10rem_1fr] sm:border-t-0 sm:border-s sm:pt-0 sm:ps-8">
+            <img
+              src="https://onemoreislandbook.com/one-more-island-book-min.jpg"
+              alt="One More Island book cover"
+              class="w-full object-contain object-left grayscale"
+              loading="lazy"
+            />
+            <div class="space-y-4">
+              <p class="text-xs font-semibold tracking-[0.16em] text-accent uppercase">Coming 2027</p>
+              <h3 class="text-2xl text-foreground">One More Island</h3>
+              <p class="text-sm leading-7 text-muted-foreground">
+                A novel about family, identity, regret, and the fragile hope of another chance on the Kent coast.
+              </p>
+              <a class="text-sm text-accent underline underline-offset-4" href="https://onemoreislandbook.com/">Explore the novel</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
