@@ -32,7 +32,7 @@
   185.199.110.153
   185.199.111.153
   ```
-- [ ] Add CNAME record (name: `www`, target: `yourusername.github.io`, DNS only — grey cloud)
+- [ ] Add CNAME record (name: `www`, target: `bownie.github.io`, DNS only — grey cloud)
 - [ ] Confirm proxied is **off** (grey cloud) for all five records
 
 ## 5. Dependencies (avoid build failures)
