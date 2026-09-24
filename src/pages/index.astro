@@ -5,7 +5,7 @@ import Footer from "@/components/Footer.astro";
 
 <Layout>
   <main id="main-content" class="app-layout">
-    <section class="site-intro border-y border-border py-12 sm:py-16">
+    <section class="site-intro py-12 sm:py-16">
       <div class="grid gap-8 sm:grid-cols-[1.25fr_0.75fr] sm:gap-16">
         <div class="space-y-6">
           <p class="eyebrow text-xs font-semibold tracking-[0.18em] text-accent uppercase">
@@ -16,14 +16,14 @@ import Footer from "@/components/Footer.astro";
             Stories about what we build, what it costs, and the soft parts of being human.
           </p>
         </div>
-        <div class="flex items-end border-t border-border pt-6 sm:border-t-0 sm:border-s sm:pt-0 sm:ps-8">
+        <div class="flex items-center pt-6 sm:border-s sm:pt-0 sm:ps-8">
           <p class="max-w-sm text-sm leading-7 text-muted-foreground">
             Hard-bitten by three decades of corporate IT. Still a softie about people, place, and a good story.
           </p>
         </div>
       </div>
 
-      <div class="mt-16 border-t border-border pt-8 sm:mt-24 sm:pt-10">
+      <div class="mt-16 pt-8 sm:mt-24 sm:pt-10">
         <div class="mb-8 flex items-baseline justify-between gap-6">
           <h2 id="books" class="text-3xl text-foreground sm:text-4xl">Books</h2>
         </div>
@@ -46,7 +46,7 @@ import Footer from "@/components/Footer.astro";
             </div>
           </article>
 
-          <article class="grid gap-6 border-t border-border pt-8 sm:grid-cols-[10rem_1fr] sm:border-t-0 sm:border-s sm:pt-0 sm:ps-8">
+          <article class="grid gap-6 pt-8 sm:grid-cols-[10rem_1fr] sm:border-s sm:pt-0 sm:ps-8">
             <img
               src="https://onemoreislandbook.com/one-more-island-book-min.jpg"
               alt="One More Island book cover"
@@ -64,6 +64,25 @@ import Footer from "@/components/Footer.astro";
           </article>
         </div>
       </div>
+
+      <section class="mt-16 pt-8 sm:mt-24 sm:pt-10">
+        <div class="grid gap-6 sm:grid-cols-[7rem_1fr] sm:items-center sm:gap-8">
+          <img
+            src="/richardwbown-warm-theme-flat.jpg"
+            alt="Richard W. Bown"
+            class="h-32 w-28 object-cover object-top sm:h-36 sm:w-28"
+            loading="lazy"
+          />
+          <div class="space-y-3">
+            <p class="text-xs font-semibold tracking-[0.18em] text-accent uppercase">About the author</p>
+            <h2 class="text-3xl text-foreground sm:text-4xl">Richard W. Bown</h2>
+            <p class="text-sm leading-7 text-muted-foreground">
+              Writes about what we build, what it costs, and the soft parts of being human.
+            </p>
+            <a class="inline-block text-sm text-accent underline underline-offset-4" href="/about/">More about Richard →</a>
+          </div>
+        </div>
+      </section>
 
     </section>
   </main>

@@ -3,7 +3,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://hardbittensoftie.com/",
-    title: "Hard-Bitten Softie",
+    title: "Richard W. Bown - Author",
     shortTitle: "Richard W. Bown - Author",
     description: "Hard-Bitten Softie - Richard W. Bown - Author",
     author: "Richard W. Bown",
