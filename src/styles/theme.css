@@ -8,6 +8,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --font-app: var(--font-body);
+  --font-definition: "EB Garamond", Georgia, serif;
 }
 
 /* Light theme values */
