@@ -5,10 +5,10 @@ description: "About Richard W. Bown"
 
 ## Hard-bitten by work, optimistic about humans
 
-Richard W. Bown is a writer and software engineer, and a three-decade survivor of corporate IT. He writes about the systems that we build, what it costs people, and the life and story that survives long after the people have moved on.
+Richard W. Bown is a writer and software engineer, and a three-decade survivor of corporate IT. He writes about the systems that we build and the life and stories that survives long after the people have moved on.
 
-His work is informed by his journey through life and work. So much of what Richard has done has been in the name of carefully building sustainable systems while also having to deal with pressure of the delivering quickly, being forced to use short cuts, death-march projects, layoffs, getting older and the sometimes petty vindictiveness of leaders. He has finally decided to explore these themes and the secrets of the people who build the systems through writing.
+Much of his career has been spent trying to build sustainable systems while also having to deal with pressure to deliver quickly, suffering forced shortcuts, death-march projects, layoffs, getting older and the selfishness and occasional vindictiveness of leaders. He explores these themes and the secrets of the people who build the systems through writing.
 
-His debut novel, [Human Software](https://humansoftwarebook.com/), is a sharp, quietly unsettling story about ambition, loyalty, and the humans behind the code.
+His debut novel, [Human Software](https://humansoftwarebook.com/), is a sharp, quietly unsettling story about ambition, loyalty, and the people behind the code.
 
-His next novel, [One More Island](https://onemoreislandbook.com/), is a story about family, regret, and finding another chance. It is due in 2027.
+His next novel, [One More Island](https://onemoreislandbook.com/), is a story about family, regret and getting another chance. It is due in 2027.
