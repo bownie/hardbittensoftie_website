@@ -3,7 +3,7 @@ title: "About"
 description: "About Richard W. Bown"
 ---
 
-## Hard-bitten by work, optimistic about humans
+## Hard-bitten by work, optimistic for humans
 
 Richard W. Bown is a writer and software engineer, and a three-decade survivor of corporate IT. He writes about the systems that we build and the life and stories that survives long after the people have moved on.
 
