@@ -1,6 +1,5 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import Socials from "./Socials.astro";
 import { useTranslations } from "@/i18n";
 
 type Props = {
@@ -18,19 +17,8 @@ const currentYear = new Date().getFullYear();
   {...attrs}
 >
   <div
-    class="flex flex-col gap-5 py-8 text-sm sm:flex-row sm:items-end sm:justify-between"
+    class="flex flex-col items-end gap-5 py-8 text-right text-sm text-muted-foreground sm:flex-row sm:items-end sm:justify-end"
   >
-    <div class="space-y-2">
-      <p class="site-title text-xl">Richard W. Bown - writer and engineer</p>
-      <nav class="flex flex-wrap gap-x-4 gap-y-1 text-muted-foreground" aria-label="Footer navigation">
-        <a href="/about/">About</a>
-        <a href="https://humansoftwarebook.com/">Human Software</a>
-        <a href="https://onemoreislandbook.com/">One More Island</a>
-      </nav>
-    </div>
-    <div class="flex flex-col gap-2 text-muted-foreground sm:items-end">
-      <Socials />
-      <span>{t.footer.copyright} &#169; {currentYear} Richard Bown</span>
-    </div>
+    <span>{t.footer.copyright} &#169; {currentYear} Richard W.Bown</span>
   </div>
 </footer>
