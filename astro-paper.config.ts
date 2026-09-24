@@ -2,11 +2,11 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://turnofftuneoutdropin.com/",
-    title: "Hard Bitten Softie",
-    shortTitle: "Hard Bitten Softie",
-    description: "Hard Bitten Softie",
-    author: "",
+    url: "https://hardbittensoftie.com/",
+    title: "Hard-Bitten Softie",
+    shortTitle: "Richard W. Bown - Author",
+    description: "Hard-Bitten Softie - Richard W. Bown - Author",
+    author: "Richard W. Bown",
     profile: "",
     lang: "en",
     timezone: "Europe/Amsterdam",

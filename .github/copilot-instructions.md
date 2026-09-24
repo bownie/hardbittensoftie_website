@@ -1,7 +1,6 @@
-# Hard Bitten Softie — Design Direction
+# Hard-Bitten Softie — Design Direction
 
-Hard Bitten Softie is the personal website of Richard Bown,
-a writer and software engineer.
+Hard-Bitten Softie is the personal website of Richard W. Bown, a writer and software engineer.
 
 The site should feel literary, editorial and understated.
 
@@ -25,7 +24,7 @@ not a software consultancy or corporate portfolio.
 
 The positioning is:
 
-"Hard bitten by three decades of corporate IT.
+"Hard-bitten by three decades of corporate IT.
 Still a softie about people, place, and a good story."
 
 The overall identity should communicate:
