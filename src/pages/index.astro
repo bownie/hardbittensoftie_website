@@ -6,15 +6,32 @@ import Footer from "@/components/Footer.astro";
 <Layout>
   <main id="main-content" class="app-layout">
     <section class="site-intro py-8 sm:py-12">
-      <div class="space-y-6">
-        <p class="eyebrow text-xs font-semibold tracking-[0.18em] text-accent uppercase">
-          Writer · software engineer
-        </p>
-        <h1 class="text-5xl leading-[0.95] text-accent sm:text-7xl">Richard W. Bown</h1>
-        <p class="max-w-xl text-xl leading-8 sm:text-2xl">
-          Stories about what we build, what it costs, and the consequences of being human at work.
-        </p>
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,24rem)] lg:items-start">
+        <div class="space-y-6">
+          <p class="eyebrow text-xs font-semibold tracking-[0.18em] text-accent uppercase">
+            Writer · software engineer
+          </p>
+          <h1 class="text-5xl leading-[0.95] text-accent sm:text-7xl">Richard W. Bown</h1>
+        </div>
+
+        <div class="flex max-w-md items-center gap-4 lg:justify-self-end lg:pt-1">
+          <div class="flex flex-col gap-2">
+            <p class="text-sm leading-7 text-muted-foreground">
+              Hard-bitten by three decades of corporate IT. Still a softie about people, place, and a good story.
+            </p>
+            <a class="text-sm text-accent underline underline-offset-4" href="/about/">More about Richard →</a>
+          </div>
+          <img
+            src="/richardwbown-wall-veen-square.jpeg"
+            alt="Richard W. Bown"
+            class="h-24 w-24 shrink-0 object-cover object-top [clip-path:circle(50%)] sm:h-28 sm:w-28"
+            loading="lazy"
+          />
+        </div>
       </div>
+      <p class="mt-8 text-justify text-xl leading-8 sm:text-2xl">
+        Stories about what we build, what it costs, and the consequences of being human at work.
+      </p>
 
       <section class="definition-card relative mx-auto mt-10 max-w-4xl overflow-hidden px-6 py-7 sm:mt-16 sm:px-10 sm:py-8" aria-label="Definition of hard-bitten">
         <p class="font-definition relative z-10 flex flex-wrap items-baseline justify-center gap-x-4 gap-y-2 border-b border-[#6b4c3b]/60 pb-4 text-center">
@@ -66,23 +83,6 @@ import Footer from "@/components/Footer.astro";
           </article>
         </div>
       </div>
-
-      <section class="mt-10 pt-6 sm:mt-16 sm:pt-8">
-        <div class="flex items-center gap-4">
-          <img
-            src="/richardwbown-wall-veen-square.jpeg"
-            alt="Richard W. Bown"
-            class="h-24 w-24 shrink-0 object-cover object-top [clip-path:circle(50%)]"
-            loading="lazy"
-          />
-          <div class="flex flex-col gap-2">
-            <p class="text-sm leading-7 text-muted-foreground">
-              Hard-bitten by three decades of corporate IT. Still a softie about people, place, and a good story.
-            </p>
-            <a class="text-sm text-accent underline underline-offset-4" href="/about/">More about Richard →</a>
-          </div>
-        </div>
-      </section>
 
     </section>
   </main>
