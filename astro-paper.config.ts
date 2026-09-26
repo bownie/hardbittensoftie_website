@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://hardbittensoftie.com/",
+    url: "https://richardwbownauthor.com/",
     title: "Richard W. Bown - Author",
     shortTitle: "Richard W. Bown - Author",
     description: "Stories about what we build, what it costs, and the consequences of being human at work.",
