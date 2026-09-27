@@ -1,4 +1,4 @@
-const THEME_KEY = "theme";
+const THEME_KEY = "theme-v2";
 const LIGHT = "light";
 const DARK = "dark";
 

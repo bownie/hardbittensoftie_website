@@ -126,7 +126,7 @@ const rssHref = getRelativeLocaleUrl(
     -->
     <script is:inline>
       (function () {
-        const stored = localStorage.getItem("theme");
+        const stored = localStorage.getItem("theme-v2");
           const theme = stored ?? "dark";
         document.firstElementChild?.setAttribute("data-theme", theme);
         // Expose value so theme.ts can skip re-detection.
