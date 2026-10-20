@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Footer from "@/components/Footer.astro";
+import NewsletterSignup from "@/components/NewsletterSignup.astro";
 ---
 
 <Layout>
@@ -30,14 +31,14 @@ import Footer from "@/components/Footer.astro";
         </div>
       </div>
       <p class="mt-8 text-justify text-xl leading-8 sm:text-2xl">
-        Stories about what we build, what it costs, and the consequences of being human at work.
+        Stories about the things we build, the people we ignore and what it all costs.
       </p>
 
-      <div class="mt-8 flex flex-wrap items-center justify-between gap-x-6 gap-y- border border-border border-s-4 border-s-accent bg-background p-5">
-        <h4 class="min-w-0 flex-1 text-xl text-foreground">Join my newsletter - get my debut novel, Human Software, free</h4>
-        <a class="inline-block shrink-0 bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground underline-offset-4 hover:underline" href="https://books.richardwbownauthor.com/h0nrgx0nqk">
-          Get my free copy
-        </a>
+      <div class="mt-8">
+        <NewsletterSignup
+          title="Join my newsletter"
+          description="All about the books that I'm writing and the ones I'm reading."
+        />
       </div>
 
       <div class="mt-10 pt-6 sm:mt-16 sm:pt-8">

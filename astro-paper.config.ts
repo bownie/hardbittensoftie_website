@@ -5,7 +5,7 @@ export default defineAstroPaperConfig({
     url: "https://richardwbownauthor.com/",
     title: "Richard W. Bown - Author",
     shortTitle: "Richard W. Bown - Author",
-    description: "Stories about what we build, what it costs, and the consequences of being human at work.",
+    description: "Stories about the things we build, the people we ignore and what it all costs.",
     ogImage: "og-rwb-new.jpg",
     author: "Richard W. Bown",
     profile: "",
