@@ -17,8 +17,73 @@ const currentYear = new Date().getFullYear();
   {...attrs}
 >
   <div
-    class="flex flex-col items-end gap-5 py-8 text-right text-sm text-muted-foreground sm:flex-row sm:items-end sm:justify-end"
+    class="flex flex-col gap-5 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between"
   >
-    <span>{t.footer.copyright} &#169; {currentYear} Richard W.Bown</span>
+    <nav class="flex flex-wrap items-center gap-4" aria-label="Social media">
+      <a
+        class="border-b border-accent/50 pb-1 text-accent transition-colors hover:border-accent"
+        href="https://bsky.app/profile/bownie.bsky.social"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Visit Richard W. Bown on Bluesky"
+      >
+        <svg
+          aria-hidden="true"
+          class="size-5 fill-current"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.4 3.7c2.7 2 5.6 6.1 6.6 8.3 1-2.2 3.9-6.3 6.6-8.3 1.9-1.4 5-2.5 5 1 0 .7-.4 5.8-.7 6.7-.9 3-4 3.7-6.8 3.2 4.9.8 6.1 3.3 3.4 5.8-5.1 4.7-7.4-1.2-8-3-.1-.3-.2-.5-.2-.6 0 .1-.1.3-.2.6-.6 1.8-2.9 7.7-8 3-2.7-2.5-1.5-5 3.4-5.8-2.8.5-5.9-.2-6.8-3.2C-.6 10.5-1 5.4-1 4.7c0-3.5 3.1-2.4 5-1Z"
+            transform="translate(1 0)"></path>
+        </svg>
+        <span class="sr-only">Bluesky</span>
+      </a>
+      <a
+        class="border-b border-accent/50 pb-1 text-accent transition-colors hover:border-accent"
+        href="https://www.linkedin.com/in/richard-bown/"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Visit Richard W. Bown on LinkedIn"
+      >
+        <svg
+          aria-hidden="true"
+          class="size-5 fill-current"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.45H4.97V9h2.96v9.45ZM6.45 7.71a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12 10.74h-2.95v-4.6c0-1.1-.02-2.52-1.54-2.52-1.54 0-1.78 1.2-1.78 2.44v4.68H9.22V9h2.84v1.29h.04c.4-.74 1.36-1.52 2.8-1.52 3 0 3.55 1.97 3.55 4.53v5.15Z"
+          ></path>
+        </svg>
+        <span class="sr-only">LinkedIn</span>
+      </a>
+      <a
+        class="border-b border-accent/50 pb-1 text-accent transition-colors hover:border-accent"
+        href="https://www.goodreads.com/author/show/59396333.Richard_W_Bown"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Visit Richard W. Bown on Goodreads"
+      >
+        <svg
+          aria-hidden="true"
+          class="size-5 fill-current"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <text
+            x="3"
+            y="20"
+            font-family="Georgia, serif"
+            font-size="22"
+            font-weight="700">g</text
+          >
+        </svg>
+        <span class="sr-only">Goodreads</span>
+      </a>
+    </nav>
+    <span class="sm:text-right"
+      >{t.footer.copyright} &#169; {currentYear} Richard W. Bown</span
+    >
   </div>
 </footer>
