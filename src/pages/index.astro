@@ -37,12 +37,18 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
       <div class="book-grid mt-8 pt-6 sm:mt-16 sm:pt-8">
         <div class="grid gap-8 sm:grid-cols-2 sm:gap-[3.375rem]">
           <article class="book-card grid gap-4 sm:grid-cols-[11rem_1fr] sm:items-stretch sm:gap-x-12">
-            <img
-              src="/human-software-cover-v4.png"
-              alt="Human Software book cover"
-              class="book-cover book-cover--human w-44 max-w-full self-center justify-self-center"
-              loading="lazy"
-            />
+            <button
+              class="book-cover book-cover--human block w-44 max-w-full cursor-zoom-in self-center justify-self-center border-0 bg-transparent p-0 focus-visible:outline-solid"
+              type="button"
+              aria-label="Enlarge Human Software book cover"
+            >
+              <img
+                src="/human-software-cover-v4.png"
+                alt="Human Software book cover"
+                class="block h-auto w-full"
+                loading="lazy"
+              />
+            </button>
             <div class="book-details book-details--human flex flex-col gap-3">
               <p class="text-xs font-semibold tracking-[0.16em] text-accent uppercase">Debut novel</p>
               <h3 class="text-2xl text-foreground">Human Software</h3>
@@ -57,12 +63,18 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
           </article>
 
           <article class="book-card grid gap-4 pt-6 sm:grid-cols-[11rem_1fr] sm:items-stretch sm:gap-x-12 sm:border-s sm:pt-0 sm:ps-8">
-            <img
-              src="/one-more-island-cover-v2.png"
-              alt="One More Island book cover"
-              class="book-cover book-cover--island w-44 max-w-full self-center justify-self-center"
-              loading="lazy"
-            />
+            <button
+              class="book-cover book-cover--island block w-44 max-w-full cursor-zoom-in self-center justify-self-center border-0 bg-transparent p-0 focus-visible:outline-solid"
+              type="button"
+              aria-label="Enlarge One More Island book cover"
+            >
+              <img
+                src="/one-more-island-cover-v2.png"
+                alt="One More Island book cover"
+                class="block h-auto w-full"
+                loading="lazy"
+              />
+            </button>
             <div class="book-details book-details--island flex flex-col gap-3">
               <p class="text-xs font-semibold tracking-[0.16em] text-accent uppercase">Coming 2027</p>
               <h3 class="text-2xl text-foreground">One More Island</h3>
@@ -77,6 +89,12 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
           </article>
         </div>
       </div>
+
+      <dialog id="book-cover-dialog" class="book-cover-dialog">
+        <div class="book-cover-dialog__content">
+          <img id="book-cover-dialog-image" class="book-cover-dialog__image" alt="" />
+        </div>
+      </dialog>
 
       <div class="mt-8 flex max-w-md items-center gap-4 sm:mt-10 lg:hidden">
         <div class="flex flex-col gap-2">
@@ -132,6 +150,41 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
     pointer-events: none;
   }
 
+  .book-cover-dialog {
+    position: fixed;
+    inset: 0;
+    width: fit-content;
+    height: fit-content;
+    max-width: min(92vw, 42rem);
+    max-height: 92dvh;
+    margin: auto;
+    padding: 1.25rem;
+    border: 1px solid rgb(255 255 255 / 16%);
+    color: var(--color-foreground);
+    background: var(--color-background);
+  }
+
+  .book-cover-dialog::backdrop {
+    background: rgb(20 17 15 / 82%);
+  }
+
+  .book-cover-dialog__content {
+    display: flex;
+    max-height: calc(92dvh - 2.5rem);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .book-cover-dialog__image {
+    width: auto;
+    max-width: 100%;
+    max-height: calc(92dvh - 2.5rem);
+    align-self: center;
+    cursor: zoom-out;
+    object-fit: contain;
+  }
+
   @media (max-width: 639px) {
     .book-grid > div {
       column-gap: 1rem;
@@ -147,6 +200,10 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
     .book-cover {
       grid-row: 1;
       max-width: min(100%, 11rem);
+      width: 100%;
+    }
+
+    .book-cover img {
       width: 100%;
     }
 
@@ -171,3 +228,35 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
     }
   }
 </style>
+
+<script>
+  document.addEventListener("click", (event) => {
+    if (!(event.target instanceof Element)) return;
+
+    const dialog = document.querySelector<HTMLDialogElement>("#book-cover-dialog");
+    const enlargedCover = event.target.closest("#book-cover-dialog-image");
+    const coverButton = event.target.closest<HTMLButtonElement>(".book-cover");
+
+    if (enlargedCover && dialog) {
+      dialog.close();
+      return;
+    }
+
+    if (coverButton && dialog) {
+      const cover = coverButton.querySelector("img");
+      const image = document.querySelector<HTMLImageElement>(
+        "#book-cover-dialog-image"
+      );
+
+      if (cover && image) {
+        image.src = cover.src;
+        image.alt = cover.alt;
+        dialog.showModal();
+      }
+
+      return;
+    }
+
+    if (event.target === dialog) dialog.close();
+  });
+</script>
