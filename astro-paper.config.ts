@@ -3,9 +3,10 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://richardwbownauthor.com/",
-    title: "Richard W. Bown - Author",
-    shortTitle: "Richard W. Bown - Author",
-    description: "Stories about the things we build, the people we ignore and what it all costs.",
+    title: "Richard W. Bown",
+    shortTitle: "Richard W. Bown",
+    description:
+      "Richard W. Bown is a novelist and software engineer writing about work, technology, people and place. Discover Human Software and his forthcoming novel, One More Island.",
     ogImage: "og-rwb-new.jpg",
     author: "Richard W. Bown",
     profile: "",
