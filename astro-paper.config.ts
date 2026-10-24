@@ -6,7 +6,7 @@ export default defineAstroPaperConfig({
     title: "Richard W. Bown",
     shortTitle: "Richard W. Bown",
     description:
-      "Richard W. Bown is a novelist and software engineer writing about work, technology, people and place. Discover Human Software and his forthcoming novel, One More Island.",
+      "Richard W. Bown is a novelist and software engineer writing about work, people and place. Discover Human Software and his forthcoming novel, One More Island.",
     ogImage: "richardwbown-london-rooftop-square-reduced.jpg",
     author: "Richard W. Bown",
     profile: "",
