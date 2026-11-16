@@ -116,11 +116,11 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
       </div>
 
       <section class="definition-card relative mx-auto mt-14 max-w-2xl overflow-hidden px-5 py-5 sm:mt-18 sm:px-7 sm:py-6" aria-label="Definition of hard-bitten">
-        <p class="font-definition relative z-10 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-2 border-b border-[#6b4c3b]/60 pb-3 text-center">
-          <span class="text-3xl font-semibold leading-none text-[#282521] italic sm:text-4xl">Hard-bitten</span>
-          <span class="text-lg font-normal text-[#6b4c3b] italic sm:text-xl">/ˌhɑːdˈbɪtən/</span>
-          <span class="text-lg font-normal text-[#6b4c3b] italic sm:text-xl">adj.</span>
-          <span class="text-lg font-normal leading-7 text-[#282521] sm:text-xl">Made stronger by difficult past experiences.</span>
+        <p class="font-definition relative z-10 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-2 border-b pb-3 text-center">
+          <span class="text-3xl font-semibold leading-none text-[#f1eadf] italic sm:text-4xl">Hard-bitten</span>
+          <span class="text-lg font-normal text-[#e08a68] italic sm:text-xl">/ˌhɑːdˈbɪtən/</span>
+          <span class="text-lg font-normal text-[#e08a68] italic sm:text-xl">adj.</span>
+          <span class="text-lg font-normal leading-7 text-[#f1eadf] sm:text-xl">Made stronger by difficult past experiences.</span>
         </p>
       </section>
 
@@ -141,17 +141,16 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
 
 <style>
   .definition-card {
-    background-color: #d9c39f;
-    box-shadow: inset 0 0 2.25rem rgb(76 57 40 / 32%);
+    border: 1px solid rgb(241 234 223 / 18%);
+    background-color: #3b3630;
   }
 
-  .definition-card::before {
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
-    content: "";
-    opacity: 0.2;
-    pointer-events: none;
+  .definition-card p {
+    border-color: rgb(241 234 223 / 24%);
+  }
+
+  :global(html[data-theme="dark"]) .definition-card {
+    background-color: color-mix(in srgb, var(--background) 90%, var(--foreground) 10%);
   }
 
   .book-cover-dialog {
