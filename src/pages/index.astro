@@ -9,18 +9,18 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
   ogImageAlt="Portrait of Richard W. Bown on a London rooftop."
 >
   <main id="main-content" class="app-layout">
-    <section class="site-intro py-8 sm:py-12">
-      <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,24rem)] lg:items-start">
-        <div class="space-y-6">
+    <section class="site-intro py-2 sm:py-6">
+      <div class="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,24rem)] lg:items-start lg:gap-8">
+        <div class="space-y-3">
           <p class="eyebrow text-xs font-semibold tracking-[0.18em] text-accent uppercase">
             Writer · software engineer
           </p>
-          <h1 class="text-5xl leading-[0.95] text-accent sm:text-7xl">Richard W. Bown</h1>
+          <h1 class="text-[2.25rem] leading-[0.95] text-accent sm:text-7xl">Richard W. Bown</h1>
         </div>
 
-        <div class="hidden max-w-md items-center gap-4 lg:flex lg:justify-self-end lg:pt-1">
+        <div class="hidden max-w-md items-center gap-3 min-[641px]:flex lg:justify-self-end lg:gap-4 lg:pt-1">
           <div class="flex flex-col gap-2">
-            <p class="text-sm leading-7 text-muted-foreground">
+            <p class="hidden text-sm leading-7 text-muted-foreground min-[641px]:block">
               Hard-bitten by three decades of corporate IT. Still a softie about people, place, and a good story.
             </p>
             <a class="text-sm text-accent underline underline-offset-4" href="/about/">More about Richard →</a>
@@ -28,92 +28,95 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
           <img
             src="/richardwbown-london-rooftop-square-reduced.jpg"
             alt="Richard W. Bown"
-            class="h-24 w-24 shrink-0 object-cover object-top [clip-path:circle(50%)] sm:h-28 sm:w-28"
+            class="h-16 w-16 shrink-0 object-cover object-top [clip-path:circle(50%)] sm:h-24 sm:w-24"
             loading="lazy"
           />
         </div>
       </div>
-      <p class="mt-8 text-justify text-xl leading-8 sm:text-2xl">
+      <p class="mt-3 hidden text-justify text-lg leading-7 min-[641px]:mt-5 min-[641px]:block min-[641px]:text-2xl min-[641px]:leading-8">
         Stories about the things we build, the people we ignore and what it all costs.
       </p>
 
-      <div class="book-grid mt-8 pt-6 sm:mt-16 sm:pt-8">
-        <div class="grid gap-8 sm:grid-cols-2 sm:gap-[3.375rem]">
-          <article class="book-card grid gap-4 sm:grid-cols-[11rem_1fr] sm:items-stretch sm:gap-x-12">
-            <button
-              class="book-cover book-cover--human block w-44 max-w-full cursor-zoom-in self-center justify-self-center border-0 bg-transparent p-0 focus-visible:outline-solid"
-              type="button"
-              aria-label="Enlarge Human Software book cover"
-            >
-              <img
-                src="/human-software-cover-v6.jpg"
-                alt="Human Software book cover"
-                class="block h-auto w-full"
-                loading="lazy"
-              />
-            </button>
-            <div class="book-details book-details--human flex flex-col gap-3">
-              <p class="text-xs font-semibold tracking-[0.16em] text-accent uppercase">Debut novel</p>
-              <h3 class="text-2xl text-foreground">Human Software</h3>
-              <p class="text-sm leading-7 text-muted-foreground">
-                Beth is the exhausted software engineer who’s spent years on call, working a job she loves as the
-                main breadwinner for her young family. Chrissie is returning to work, an American executive, parachuted
-                in to restructure the local workforce.  With data centres on the horizon and AI threatening jobs,
-                both women must decide which future they want, for themselves, their families and this small Kentish
-                town.
-              </p>
-              <a class="pt-1 text-sm text-accent underline underline-offset-4" href="https://humansoftwarebook.com/">Visit the book site</a>
-            </div>
-          </article>
-
-          <article class="book-card grid gap-4 pt-6 sm:grid-cols-[11rem_1fr] sm:items-stretch sm:gap-x-12 sm:border-s sm:pt-0 sm:ps-8">
-            <button
-              class="book-cover book-cover--island block w-44 max-w-full cursor-zoom-in self-center justify-self-center border-0 bg-transparent p-0 focus-visible:outline-solid"
-              type="button"
-              aria-label="Enlarge One More Island book cover"
-            >
-              <img
-                src="/one-more-island-cover-v2.4.jpg"
-                alt="One More Island book cover"
-                class="block h-auto w-full"
-                loading="lazy"
-              />
-            </button>
-            <div class="book-details book-details--island flex flex-col gap-3">
-              <p class="text-xs font-semibold tracking-[0.16em] text-accent uppercase">Coming 2027</p>
-              <h3 class="text-2xl text-foreground">One More Island</h3>
-              <p class="text-sm leading-7 text-muted-foreground">
-                Peter Watchett lives the quiet life he thinks he needs, alone on his boat Jezebel. He came back
-                to Sandport to escape his past and start again, but when his estranged brother walks back into town,
-                uncomfortable truths emerge that threaten to destroy what he's built. Peter must decide
-                who he is, and whether the future he truly wants, is still within reach.
-              </p>
-              <a class="mt-auto pt-1 text-sm text-accent underline underline-offset-4" href="https://onemoreislandbook.com/">Explore the novel</a>
-            </div>
-          </article>
+      <article class="island-hero">
+        <button
+          class="book-cover book-cover--island island-hero__cover block max-w-full cursor-zoom-in border-0 bg-transparent p-0 focus-visible:outline-solid"
+          type="button"
+          aria-label="Enlarge One More Island book cover"
+        >
+          <img
+            src="/one-more-island-cover-v2.4.jpg"
+            alt="Cover artwork for the forthcoming novel One More Island"
+            class="block h-auto w-full shadow-xl"
+            fetchpriority="high"
+          />
+        </button>
+        <div class="island-hero__copy flex max-w-2xl flex-col items-center gap-3 text-center">
+          <p class="island-hero__badge border border-accent/40 bg-accent/10 px-2 py-1 font-semibold tracking-[0.14em] text-accent uppercase">
+            Coming spring 2027
+          </p>
+          <h2 class="island-hero__title text-foreground">One More Island</h2>
+          <p class="island-hero__hook text-foreground">
+            Peter came back to live the quiet life. Why is he so restless?
+          </p>
+          <p class="hidden max-w-[52ch] text-base leading-7 text-muted-foreground min-[641px]:block">
+            Peter Watchett lives the quiet life he thinks he needs, alone on his boat Jezebel. He came back to
+            Sandport to escape his past and start again, but when his estranged brother walks back into town,
+            uncomfortable truths emerge that threaten to destroy what he's built. Peter must decide who he is,
+            and whether the future he truly wants is still within reach.
+          </p>
+          <p class="island-hero__promise text-foreground">
+            Chapter 1 will be landing soon. Sign up here to stay informed.
+          </p>
+          <a
+            class="island-hero__signup inline-block bg-accent font-semibold text-accent-foreground underline-offset-4 hover:brightness-110 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+            href="#newsletter-signup"
+          >
+            Sign up for the newsletter
+          </a>
+          <a
+            class="text-sm text-accent underline underline-offset-4"
+            href="https://onemoreislandbook.com/"
+          >Explore the novel</a>
         </div>
-      </div>
+      </article>
+
+      <section class="mt-10 border-t border-border pt-8 sm:mt-16 sm:pt-10" aria-labelledby="human-software-title">
+        <article class="grid gap-5 sm:grid-cols-[9rem_minmax(0,1fr)] sm:items-start sm:gap-8">
+          <button
+            class="book-cover book-cover--human block w-32 max-w-full cursor-zoom-in self-center border-0 bg-transparent p-0 focus-visible:outline-solid sm:w-36"
+            type="button"
+            aria-label="Enlarge Human Software book cover"
+          >
+            <img
+              src="/human-software-cover-v6.jpg"
+              alt="Cover artwork for the debut novel Human Software"
+              class="block h-auto w-full"
+              loading="lazy"
+            />
+          </button>
+          <div class="flex flex-col gap-3">
+            <p class="text-xs font-semibold tracking-[0.16em] text-accent uppercase">Debut novel</p>
+            <h2 id="human-software-title" class="text-2xl text-foreground">Human Software</h2>
+            <p class="text-sm leading-7 text-muted-foreground">
+              Beth is the exhausted software engineer who’s spent years on call, working a job she loves as the
+              main breadwinner for her young family. Chrissie is returning to work, an American executive, parachuted
+              in to restructure the local workforce.  With data centres on the horizon and AI threatening jobs,
+              both women must decide which future they want, for themselves, their families and this small Kentish
+              town.
+            </p>
+            <a class="pt-1 text-sm text-accent underline underline-offset-4" href="https://humansoftwarebook.com/">Visit the book site</a>
+          </div>
+        </article>
+        <a class="mt-4 inline-block text-sm text-accent underline underline-offset-4 min-[641px]:hidden" href="/about/">
+          More about Richard →
+        </a>
+      </section>
 
       <dialog id="book-cover-dialog" class="book-cover-dialog">
         <div class="book-cover-dialog__content">
           <img id="book-cover-dialog-image" class="book-cover-dialog__image" alt="" />
         </div>
       </dialog>
-
-      <div class="mt-8 flex max-w-md items-center gap-4 sm:mt-10 lg:hidden">
-        <div class="flex flex-col gap-2">
-          <p class="text-sm leading-7 text-muted-foreground">
-            Hard-bitten by three decades of corporate IT. Still a softie about people, place, and a good story.
-          </p>
-          <a class="text-sm text-accent underline underline-offset-4" href="/about/">More about Richard →</a>
-        </div>
-        <img
-          src="/richardwbown-london-rooftop-square-reduced.jpg"
-          alt="Richard W. Bown"
-          class="h-24 w-24 shrink-0 object-cover object-top [clip-path:circle(50%)] sm:h-28 sm:w-28"
-          loading="lazy"
-        />
-      </div>
 
       <section class="definition-card relative mx-auto mt-14 max-w-2xl overflow-hidden px-5 py-5 sm:mt-18 sm:px-7 sm:py-6" aria-label="Definition of hard-bitten">
         <p class="font-definition relative z-10 flex flex-wrap items-baseline justify-center gap-x-3 gap-y-2 border-b pb-3 text-center">
@@ -125,7 +128,7 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
       </section>
 
 
-      <div class="mt-8">
+      <div id="newsletter-signup" class="mt-8 scroll-mt-8">
         <NewsletterSignup
           title="Join my newsletter"
           description="All about the books that I'm writing and the ones I'm reading."
@@ -140,6 +143,104 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
 </Layout>
 
 <style>
+  .island-hero {
+    display: grid;
+    justify-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1100px;
+    margin: 1.5rem auto 0;
+    padding-inline: 2rem;
+    text-align: center;
+  }
+
+  .island-hero__cover {
+    width: min(68vw, 300px);
+  }
+
+  .island-hero__copy {
+    min-width: 0;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .island-hero__badge {
+    font-size: 0.75rem;
+  }
+
+  .island-hero__title {
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    line-height: 0.98;
+  }
+
+  .island-hero__hook {
+    max-width: 100%;
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2vw, 1.6rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .island-hero__promise {
+    max-width: 100%;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .island-hero__signup {
+    padding: 0.9rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .island-hero__title {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      clip-path: inset(50%);
+    }
+  }
+
+  @media (min-width: 901px) {
+    .island-hero {
+      align-items: center;
+      grid-template-columns: clamp(240px, 26vw, 340px) minmax(0, 1fr);
+      column-gap: 4rem;
+      row-gap: 0;
+      text-align: left;
+    }
+
+    .island-hero__cover {
+      width: clamp(240px, 26vw, 340px);
+      max-height: 70vh;
+    }
+
+    .island-hero__cover img {
+      max-height: 70vh;
+      object-fit: contain;
+    }
+
+    .island-hero__copy {
+      align-items: flex-start;
+      justify-self: stretch;
+      text-align: left;
+    }
+  }
+
+  .book-cover--island img {
+    box-shadow:
+      0 1.25rem 3rem rgb(0 0 0 / 35%),
+      0 0 1.25rem rgb(224 138 104 / 20%);
+  }
+
+  .island-hero__hook {
+    font-family: var(--font-display);
+  }
+
   .definition-card {
     border: 1px solid rgb(241 234 223 / 18%);
     background-color: #3b3630;
@@ -188,48 +289,6 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
     object-fit: contain;
   }
 
-  @media (max-width: 639px) {
-    .book-grid > div {
-      column-gap: 1rem;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      row-gap: 1.5rem;
-    }
-
-    .book-card {
-      display: contents;
-    }
-
-    .book-cover {
-      grid-row: 1;
-      max-width: min(100%, 11rem);
-      width: 100%;
-    }
-
-    .book-cover img {
-      width: 100%;
-    }
-
-    .book-cover--human {
-      grid-column: 1;
-    }
-
-    .book-cover--island {
-      grid-column: 2;
-    }
-
-    .book-details {
-      grid-column: 1 / -1;
-    }
-
-    .book-details--human {
-      grid-row: 2;
-    }
-
-    .book-details--island {
-      grid-row: 3;
-    }
-  }
 </style>
 
 <script>
