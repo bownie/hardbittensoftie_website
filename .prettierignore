@@ -1,0 +1,5 @@
+# Generated lockfile. CI installs with npm (package-lock.json).
+pnpm-lock.yaml
+
+# Generated from commit history by the release tooling.
+CHANGELOG.md
