@@ -29,7 +29,11 @@ const { Content } = await render(about);
     <div class="grid gap-8 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] sm:items-center sm:gap-12">
       <figure class="not-prose m-0">
         <img
-          src="/richardwbown-london-rooftop-square-reduced.jpg"
+          src="/richardwbown-portrait-768.jpg"
+          srcset="/richardwbown-portrait-192.jpg 192w, /richardwbown-portrait-768.jpg 768w"
+          sizes="(min-width: 640px) 384px, 80vw"
+          width="768"
+          height="768"
           alt="Richard W. Bown"
           class="!border-0 block w-[80%] max-w-sm object-cover object-top"
           loading="eager"

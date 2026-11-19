@@ -2,12 +2,66 @@
 import Layout from "@/layouts/Layout.astro";
 import Footer from "@/components/Footer.astro";
 import NewsletterSignup from "@/components/NewsletterSignup.astro";
+
+const siteUrl = "https://richardwbownauthor.com";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: "Richard W. Bown",
+      inLanguage: "en",
+      publisher: { "@id": `${siteUrl}/#person` },
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      name: "Richard W. Bown",
+      url: `${siteUrl}/`,
+      jobTitle: "Novelist and software engineer",
+      image: `${siteUrl}/richardwbown-portrait-768.jpg`,
+      sameAs: [
+        "https://bsky.app/profile/bownie.bsky.social",
+        "https://www.linkedin.com/in/richard-bown/",
+        "https://www.goodreads.com/author/show/59396333.Richard_W_Bown",
+      ],
+    },
+    {
+      "@type": "Book",
+      name: "One More Island",
+      author: { "@id": `${siteUrl}/#person` },
+      url: "https://onemoreislandbook.com/",
+      image: `${siteUrl}/one-more-island-cover-680.jpg`,
+      description:
+        "Peter Watchett came back to Sandport for a quiet life on his boat, Jezebel. When his estranged brother returns, the past he has been avoiding comes with him.",
+    },
+    {
+      "@type": "Book",
+      name: "Human Software",
+      author: { "@id": `${siteUrl}/#person` },
+      url: "https://humansoftwarebook.com/",
+      image: `${siteUrl}/human-software-cover-640.jpg`,
+      description:
+        "A software engineer and an American executive restructuring a small Kentish town both have to decide which future they want, for themselves, their families and the place they live.",
+    },
+  ],
+};
 ---
 
 <Layout
   title="Richard W. Bown | Novelist & Software Engineer"
-  ogImageAlt="Portrait of Richard W. Bown on a London rooftop."
+  ogImageAlt="Richard W. Bown, novelist and software engineer, beside his portrait and the line: stories about what we build, what it costs, and the consequences of being human at work."
+  ogImageWidth={1200}
+  ogImageHeight={630}
 >
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(structuredData)}
+  />
   <main id="main-content" class="app-layout">
     <section class="site-intro py-2 sm:py-6">
       <div class="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,24rem)] lg:items-start lg:gap-8">
@@ -23,10 +77,13 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
             <p class="hidden text-sm leading-7 text-muted-foreground min-[641px]:block">
               Hard-bitten by three decades of corporate IT. Still a softie about people, place, and a good story.
             </p>
-            <a class="text-sm text-accent underline underline-offset-4" href="/about/">More about Richard →</a>
           </div>
           <img
-            src="/richardwbown-london-rooftop-square-reduced.jpg"
+            src="/richardwbown-portrait-768.jpg"
+            srcset="/richardwbown-portrait-192.jpg 192w, /richardwbown-portrait-768.jpg 768w"
+            sizes="96px"
+            width="192"
+            height="192"
             alt="Richard W. Bown"
             class="h-16 w-16 shrink-0 object-cover object-top [clip-path:circle(50%)] sm:h-24 sm:w-24"
             loading="lazy"
@@ -37,14 +94,17 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
         Stories about the things we build, the people we ignore and what it all costs.
       </p>
 
-      <article class="island-hero">
+      <article id="books" class="island-hero scroll-mt-4">
         <button
           class="book-cover book-cover--island island-hero__cover block max-w-full cursor-zoom-in border-0 bg-transparent p-0 focus-visible:outline-solid"
           type="button"
           aria-label="Enlarge One More Island book cover"
+          data-zoom-src="/one-more-island-cover-v2.4.jpg"
         >
           <img
-            src="/one-more-island-cover-v2.4.jpg"
+            src="/one-more-island-cover-680.jpg"
+            srcset="/one-more-island-cover-340.jpg 340w, /one-more-island-cover-680.jpg 680w, /one-more-island-cover-v2.4.jpg 1005w"
+            sizes="(min-width: 901px) 340px, min(68vw, 300px)"
             alt="Cover artwork for the forthcoming novel One More Island"
             class="block h-auto w-full shadow-xl"
             fetchpriority="high"
@@ -57,6 +117,10 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
           <h2 class="island-hero__title text-foreground">One More Island</h2>
           <p class="island-hero__hook text-foreground">
             Peter came back to live the quiet life. Why is he so restless?
+          </p>
+          <p class="max-w-[38ch] text-base leading-7 text-muted-foreground min-[641px]:hidden">
+            Peter Watchett came back to Sandport for a quiet life on his boat, Jezebel. Then his estranged
+            brother returns, and the past he's been avoiding comes with him.
           </p>
           <p class="hidden max-w-[52ch] text-base leading-7 text-muted-foreground min-[641px]:block">
             Peter Watchett lives the quiet life he thinks he needs, alone on his boat Jezebel. He came back to
@@ -81,14 +145,17 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
       </article>
 
       <section class="mt-10 border-t border-border pt-8 sm:mt-16 sm:pt-10" aria-labelledby="human-software-title">
-        <article class="grid gap-5 sm:grid-cols-[9rem_minmax(0,1fr)] sm:items-start sm:gap-8">
+        <article class="mx-auto grid w-full max-w-3xl justify-items-center gap-6 sm:grid-cols-[10rem_minmax(0,1fr)] sm:items-center sm:justify-items-start sm:gap-8">
           <button
-            class="book-cover book-cover--human block w-32 max-w-full cursor-zoom-in self-center border-0 bg-transparent p-0 focus-visible:outline-solid sm:w-36"
+            class="book-cover book-cover--human block w-32 max-w-full cursor-zoom-in self-center border-0 bg-transparent p-0 focus-visible:outline-solid sm:w-40"
             type="button"
             aria-label="Enlarge Human Software book cover"
+            data-zoom-src="/human-software-cover-v6.jpg"
           >
             <img
-              src="/human-software-cover-v6.jpg"
+              src="/human-software-cover-320.jpg"
+              srcset="/human-software-cover-320.jpg 320w, /human-software-cover-640.jpg 640w, /human-software-cover-v6.jpg 928w"
+              sizes="(min-width: 640px) 160px, 128px"
               alt="Cover artwork for the debut novel Human Software"
               class="block h-auto w-full"
               loading="lazy"
@@ -191,18 +258,6 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
   .island-hero__signup {
     padding: 0.9rem 1.75rem;
     font-size: 1rem;
-  }
-
-  @media (max-width: 640px) {
-    .island-hero__title {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      clip-path: inset(50%);
-    }
   }
 
   @media (min-width: 901px) {
@@ -311,7 +366,8 @@ import NewsletterSignup from "@/components/NewsletterSignup.astro";
       );
 
       if (cover && image) {
-        image.src = cover.src;
+        image.src =
+          coverButton.dataset.zoomSrc ?? cover.currentSrc ?? cover.src;
         image.alt = cover.alt;
         dialog.showModal();
       }

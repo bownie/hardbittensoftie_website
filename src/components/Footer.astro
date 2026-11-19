@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import { useTranslations } from "@/i18n";
 
 type Props = {
@@ -82,8 +83,24 @@ const currentYear = new Date().getFullYear();
         <span class="sr-only">Goodreads</span>
       </a>
     </nav>
-    <span class="sm:text-right"
-      >{t.footer.copyright} &#169; {currentYear} Richard W. Bown</span
-    >
+    <div class="flex flex-wrap items-center gap-4 sm:justify-end">
+      <a
+        class="text-accent underline underline-offset-4"
+        href={getRelativeLocaleUrl(
+          Astro.currentLocale ?? "en",
+          "privacy"
+        )}>Privacy</a
+      >
+      <button
+        type="button"
+        class="text-accent underline underline-offset-4"
+        data-cookie-settings
+      >
+        Cookie settings
+      </button>
+      <span class="sm:text-right"
+        >{t.footer.copyright} &#169; {currentYear} Richard W. Bown</span
+      >
+    </div>
   </div>
 </footer>
