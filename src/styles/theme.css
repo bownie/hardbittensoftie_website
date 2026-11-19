@@ -8,7 +8,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --font-app: var(--font-body);
-  --font-definition: "EB Garamond", Georgia, serif;
+  --font-definition: var(--font-eb-garamond);
 }
 
 /* Light theme values */
@@ -21,8 +21,8 @@
   --muted: #ded6c9;
   --muted-foreground: #70685e;
   --border: #c8bdad;
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "DM Sans", Helvetica, sans-serif;
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-dm-sans);
 }
 
 /* Dark theme values */
@@ -34,6 +34,6 @@
   --muted: #474038;
   --muted-foreground: #bdb2a4;
   --border: #6d5e50;
-  --font-display: "Fraunces", Georgia, serif;
-  --font-body: "DM Sans", Helvetica, sans-serif;
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-dm-sans);
 }

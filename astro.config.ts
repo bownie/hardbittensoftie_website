@@ -19,11 +19,16 @@ import config from "./astro-paper.config";
 
 export default defineConfig({
   site: config.site.url,
+  redirects: {
+    "/writing": "/",
+  },
   integrations: [
     mdx(),
     sitemap({
       filter: page =>
-        config.features?.showArchives !== false || !page.endsWith("/archives/"),
+        !page.endsWith("/writing/") &&
+        (config.features?.showArchives !== false ||
+          !page.endsWith("/archives/")),
     }),
   ],
   i18n: {
@@ -52,13 +57,31 @@ export default defineConfig({
   },
   fonts: [
     {
-      name: "Google Sans Code",
-      cssVariable: "--font-google-sans-code",
+      name: "DM Sans",
+      cssVariable: "--font-dm-sans",
       provider: fontProviders.google(),
-      fallbacks: ["monospace"],
-      weights: [300, 400, 500, 600, 700],
+      fallbacks: ["Helvetica", "sans-serif"],
+      weights: [400, 500, 600, 700],
+      styles: ["normal"],
+      subsets: ["latin"],
+    },
+    {
+      name: "Fraunces",
+      cssVariable: "--font-fraunces",
+      provider: fontProviders.google(),
+      fallbacks: ["Georgia", "serif"],
+      weights: [500, 600],
+      styles: ["normal"],
+      subsets: ["latin"],
+    },
+    {
+      name: "EB Garamond",
+      cssVariable: "--font-eb-garamond",
+      provider: fontProviders.google(),
+      fallbacks: ["Georgia", "serif"],
+      weights: [400, 500, 600],
       styles: ["normal", "italic"],
-      formats: ["woff", "ttf"],
+      subsets: ["latin"],
     },
   ],
   env: {

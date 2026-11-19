@@ -27,7 +27,7 @@ export default defineAstroPaperConfig({
     showBackButton: true,
     editPost: {
       enabled: true,
-      url: "https://github.com/satnaing/astro-paper/edit/main/",
+      url: "https://github.com/bownie/hardbittensoftie_website/edit/main/",
     },
     search: false,
   },
