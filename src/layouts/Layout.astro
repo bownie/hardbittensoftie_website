@@ -1,7 +1,6 @@
 ---
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
-import { getRelativeLocaleUrl } from "astro:i18n";
 import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
 import { getAssetPath } from "@/utils/withBase";
 import config from "@/config";
@@ -34,10 +33,6 @@ const {
 const isHome = Astro.url.pathname === "/";
 
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
-const rssHref = getRelativeLocaleUrl(
-  Astro.currentLocale ?? config.site.lang,
-  "rss.xml"
-);
 ---
 
 <!doctype html>
@@ -53,18 +48,16 @@ const rssHref = getRelativeLocaleUrl(
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/png" sizes="64x64" href={getAssetPath("favicon.png")} />
     <link rel="apple-touch-icon" sizes="180x180" href={getAssetPath("apple-touch-icon.png")} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font -->
+    <!-- Self-hosted fonts: no third-party request or render-blocking stylesheet -->
     <Font
-      cssVariable="--font-google-sans-code"
+      cssVariable="--font-dm-sans"
       preload={[{ subset: "latin", weight: 400, style: "normal" }]}
     />
+    <Font
+      cssVariable="--font-fraunces"
+      preload={[{ subset: "latin", weight: 500, style: "normal" }]}
+    />
+    <Font cssVariable="--font-eb-garamond" />
 
     <!-- Primary meta -->
     <title>{title}</title>
@@ -97,14 +90,6 @@ const rssHref = getRelativeLocaleUrl(
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
     {ogImageAlt && <meta property="twitter:image:alt" content={ogImageAlt} />}
-
-    <!-- RSS autodiscovery -->
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title={site.title}
-      href={new URL(rssHref, Astro.site)}
-    />
 
     <!-- Filled at runtime by theme.ts to match the current background colour -->
     <meta name="theme-color" content="" />

@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<Layout
+  title="Page not found | Richard W. Bown"
+  description="That page doesn't exist. Head back to the books or the about page."
+>
+  <main id="main-content" class="app-layout flex-1 py-14 sm:py-24">
+    <p
+      class="text-xs font-semibold tracking-[0.18em] text-accent uppercase"
+    >
+      404
+    </p>
+    <h1 class="mt-2 text-4xl leading-tight text-accent sm:text-6xl">
+      Nothing on this page
+    </h1>
+    <p class="mt-4 max-w-xl text-lg leading-8 text-muted-foreground">
+      That link may be old or mistyped. The books, the about page and the
+      newsletter are all one click away.
+    </p>
+    <nav
+      class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm"
+      aria-label="Suggested pages"
+    >
+      <a class="text-accent underline underline-offset-4" href="/">Home</a>
+      <a class="text-accent underline underline-offset-4" href="/#books">Books</a>
+      <a class="text-accent underline underline-offset-4" href="/about/">About</a>
+      <a class="text-accent underline underline-offset-4" href="/#newsletter-signup">
+        Newsletter
+      </a>
+    </nav>
+  </main>
+  <Footer />
+</Layout>
